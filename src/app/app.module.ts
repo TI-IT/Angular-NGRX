@@ -3,16 +3,41 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import {StoreModule} from '@ngrx/store'
+import {StoreDevtoolsModule} from '@ngrx/store-devtools'
+import {EffectsModule} from '@ngrx/effects'
+import { EntityDataModule, EntityDataService} from '@ngrx/data'
+import {HttpClientModule} from '@angular/common/http'
+import {StoreRouterConnectingModule} from '@ngrx/router-store'
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        StoreModule.forRoot({}),
+        StoreRouterConnectingModule.forRoot(),
+        StoreDevtoolsModule.instrument({
+            name: 'NgRx Demo tiit App',
+            // In a production build you would want to disable the Store Devtools
+            // logOnly: !isDevMode(),
+        }),
+        EffectsModule.forRoot([]),
+        EntityDataModule.forRoot({}),
+
+
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+
+  }
+}
