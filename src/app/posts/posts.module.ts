@@ -19,8 +19,6 @@ const routes: Routes = [
 ]
 
 const entityMetadata: EntityMetadataMap = {
-
-
   Post: {
     sortComparer: sortByName,
     entityDispatcherOptions: {

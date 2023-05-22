@@ -23,9 +23,9 @@
     <td>{{post.title}}</td>
     <td>{{post.description}}</td>
     <td>
-      <a [routerLink]="['/posts', 'edit', post.id]">Edit Post</a>&nbsp;&nbsp;
-      <a [routerLink]="['/posts', 'details', post.id]">Details Post</a>&nbsp;&nbsp;
-      <a href="" (click)="onDeletePost($event, post.id)">Delete Post</a>
+      <a [routerLink]="['/posts', 'edit', post.id]">✒️</a>&nbsp;&nbsp;
+      <a [routerLink]="['/posts', 'details', post.id]">🔍</a>&nbsp;&nbsp;
+      <a href="" (click)="onDeletePost($event, post.id)">🗑️</a>
     </td>
   </tr>
 </tbody>
