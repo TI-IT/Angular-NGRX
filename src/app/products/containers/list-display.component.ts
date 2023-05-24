@@ -3,7 +3,6 @@ import {ProductService} from '../products.service'
 import {Observable} from 'rxjs'
 import {Product} from '../model/product'
 import {Store} from '@ngrx/store'
-import {HeaderService} from '../../shared/layout/header/header.service'
 
 @Component({
   selector: 'app-list-display',
@@ -24,13 +23,11 @@ export class ListDisplayComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private headerService: HeaderService
   ) {
     //Предостовляет все объекты entities-сущности
     this.products$ = productService.entities$
     //Предостовляет все параметры загрузки
     this.loading$ = productService.loaded$
-    this.queryFilter$ = headerService.search
   }
 
   ngOnInit(): void {

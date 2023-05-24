@@ -1,19 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
 import {StoreModule} from '@ngrx/store'
 import {StoreDevtoolsModule} from '@ngrx/store-devtools'
 import {EffectsModule} from '@ngrx/effects'
-import {DefaultDataServiceConfig, EntityDataModule, EntityDataService} from '@ngrx/data'
+import {EntityDataModule} from '@ngrx/data'
 import {HttpClientModule} from '@angular/common/http'
 import {StoreRouterConnectingModule} from '@ngrx/router-store';
-import { HeaderComponent } from './shared/layout/header/header.component';
-import { FooterComponent } from './shared/layout/footer/footer.component'
+import {FooterComponent} from './shared/layout/footer/footer.component'
 import {CommonModule} from '@angular/common';
-import { NavbarComponent } from './shared/layout/navbar/navbar.component'
+import {NavbarComponent} from './shared/layout/navbar/navbar.component'
 
 // const defaultDataServiceConfig: DefaultDataServiceConfig = {
 //   root: 'http://localhost:3001/products',
@@ -24,7 +23,6 @@ import { NavbarComponent } from './shared/layout/navbar/navbar.component'
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
     FooterComponent,
     NavbarComponent,
   ],
@@ -44,8 +42,7 @@ import { NavbarComponent } from './shared/layout/navbar/navbar.component'
     EntityDataModule.forRoot({}),
   ],
   providers: [],
-  exports: [
-  ],
+  exports: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {
