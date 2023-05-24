@@ -12,7 +12,8 @@ import {HttpClientModule} from '@angular/common/http'
 import {StoreRouterConnectingModule} from '@ngrx/router-store';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component'
-import {CommonModule} from '@angular/common'
+import {CommonModule} from '@angular/common';
+import { NavbarComponent } from './shared/layout/navbar/navbar.component'
 
 // const defaultDataServiceConfig: DefaultDataServiceConfig = {
 //   root: 'http://localhost:3001/products',
@@ -25,6 +26,7 @@ import {CommonModule} from '@angular/common'
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
